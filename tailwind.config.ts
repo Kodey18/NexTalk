@@ -19,6 +19,14 @@ const config = {
     },
     extend: {
       colors: {
+        /* 
+        adding our own customised theme colors basicaly extending the tailwind css
+        */
+        dark : {
+          1 : '#1C1F2E',
+          2 : '#161925',
+        },
+        
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
