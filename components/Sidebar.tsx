@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { sideBarLinks } from '@/constants';
 import { cn } from '@/lib/utils';
@@ -20,7 +20,7 @@ const Sidebar = () => {
         <div className='flex flex-1 flex-col gap-6'>
 
             {sideBarLinks.map((link) => {
-                const isActive = link.route === pathName || pathName.startsWith(link.route);
+                let isActive = link.route === pathName;
 
                 return(
                     <Link
@@ -30,7 +30,7 @@ const Sidebar = () => {
                         here cn stands for classNames which is used for adding multiple and dynamic tailwind css classes.
                         */
                         className={cn('flex gap-4 items-center p-4 rounded-lg justify-start', {
-                            'bg-blue-1': isActive,
+                            'bg-blue-700': isActive,
                         })}
                     >
                         <Image 
@@ -40,7 +40,7 @@ const Sidebar = () => {
                             height={24}
                         />
                         <p className='text-lg font-semibold max-lg:hidden'>
-                        {link.label}
+                            {link.label}
                         </p>
                     </Link>
                 );
