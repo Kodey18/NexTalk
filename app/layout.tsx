@@ -18,7 +18,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider>
-        <body className={`${inter.className} bg-dark-2`}>{children}</body>
+        <body className={`${inter.className} bg-dark-2`}>
+
+          {/* <header>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </header> */}
+
+          <main>
+            {children}
+          </main>
+        </body>
       </ClerkProvider>
       {/* 
       After extending the tailwind css now we are using the extended theme class "dark" for accessing its 2nd object that hold the value of our dark color.
