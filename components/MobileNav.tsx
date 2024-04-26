@@ -19,6 +19,7 @@ import { cn } from '@/lib/utils';
 
 const MobileNav = () => {
   const pathName = usePathname();
+  
   return (
     <div>
       {/*Here sheet is used as a hamburger menu for small devices*/}

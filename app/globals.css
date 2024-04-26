@@ -2,6 +2,16 @@
   @tailwind components;
   @tailwind utilities;
 
+  /* customised class to apply certain tailwind classes */
+
+  @layer utilities{
+
+    /* Now if some element needs flex and justify between */
+    .flex-between{
+      @apply flex justify-between;
+    }
+  }
+
   @layer base {
     :root {
       --background: 0 0% 100%;
