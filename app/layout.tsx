@@ -18,6 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider
+      /*
+      appearance is basically object containing fields for customising the clerk sign in/up ui component.
+      */
         appearance={{
           layout: {
             socialButtonsVariant: "iconButton",
