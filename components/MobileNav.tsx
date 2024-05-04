@@ -5,9 +5,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from 'next/image';
@@ -49,14 +46,14 @@ const MobileNav = () => {
           </Link>
 
           <div className='flex h-[calc(100vh-72px)] flex-col gap-[20px] text-white py-[50px] overflow-y-auto'>
-            {sideBarLinks.map((link) => {
+            {sideBarLinks.map((link, index) => {
                   let isActive = link.route === pathName;
 
                   return(
-                      <SheetClose asChild>
+                      <SheetClose asChild key={link.label}>
                         <Link
                           href={link.route}
-                          key={link.label}
+                          key={index}
                           /*
                           here cn stands for classNames which is used for adding multiple and dynamic tailwind css classes.
                           */

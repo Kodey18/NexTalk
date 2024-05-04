@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import MobileNav from './MobileNav'
 import { SignedIn, SignIn, UserButton } from '@clerk/nextjs'
+import { Variable } from 'lucide-react'
 
 const Navbar = () => {
   return (
@@ -24,7 +25,15 @@ const Navbar = () => {
       <div className='flex-between gap-5'>
         {/*Clerk user-management*/}
         <SignedIn>
-          <UserButton />
+          <UserButton
+           appearance={{
+            variables:{
+              // colorPrimary : "#fff",
+              colorText : "#fff"
+            }
+           }
+          }
+          />
         </SignedIn>
         
         <MobileNav />

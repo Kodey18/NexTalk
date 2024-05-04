@@ -19,13 +19,13 @@ const Sidebar = () => {
 
         <div className='flex flex-1 flex-col gap-6'>
 
-            {sideBarLinks.map((link) => {
+            {sideBarLinks.map((link, index) => {
                 let isActive = link.route === pathName;
 
                 return(
                     <Link
                         href={link.route}
-                        key={link.label}
+                        key={index}
                         /*
                         here cn stands for classNames which is used for adding multiple and dynamic tailwind css classes.
                         */
